@@ -19,8 +19,9 @@ public class Main {
             System.out.println(people.get(index));
         }
 
-        Collections.sort(people);
-
+        //Collections.sort(people);
+        Collections.sort(people, new PersonCompareByHeight());
+        
         System.out.println("======== after sort ==========");
         for (int index = 0; index < people.size(); index++)
         {
