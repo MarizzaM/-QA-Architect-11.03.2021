@@ -17,50 +17,37 @@ public class Main {
         cars.add(new Car("77-888-77", "Hennessey", "VenomGT", LocalDateTime.of(2018,10,5,0,0,0), "Blue", 2 ));
 
         System.out.println("======== before sort ==========");
-        for (int index = 0; index < cars.size(); index++)
-        {
-            System.out.println(cars.get(index));
-        }
+        printSort(cars);
 
         Collections.sort(cars);
         System.out.println("\n======== after sort by id ==========");
-        for (int index = 0; index < cars.size(); index++)
-        {
-            System.out.println(cars.get(index));
-        }
+        printSort(cars);
 
         Collections.sort(cars, new CarSortByBrandAndModel());
 
         System.out.println("\n======== after sort by brand (model) ==========");
-        for (int index = 0; index < cars.size(); index++)
-        {
-            System.out.println(cars.get(index));
-        }
+        printSort(cars);
 
         Collections.sort(cars, new CarSortByDateCreation());
 
         System.out.println("\n======== after sort by date creation ==========");
-        for (int index = 0; index < cars.size(); index++)
-        {
-            System.out.println(cars.get(index));
-        }
+        printSort(cars);
 
         Collections.sort(cars, new CarSortByColor());
 
         System.out.println("\n======== after sort by color ==========");
-        for (int index = 0; index < cars.size(); index++)
-        {
-            System.out.println(cars.get(index));
-        }
+        printSort(cars);
 
         Collections.sort(cars, new CarSortBySeats());
 
         System.out.println("\n======== after sort by seats ==========");
+        printSort(cars);
+    }
+
+    static void printSort(ArrayList<Car> cars){
         for (int index = 0; index < cars.size(); index++)
         {
             System.out.println(cars.get(index));
         }
-
-
     }
 }
